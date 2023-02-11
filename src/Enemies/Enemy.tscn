@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cutw0cw1ciph8"]
+
+[ext_resource type="Script" path="res://src/Enemies/Enemy.gd" id="1_yavla"]
+[ext_resource type="Texture2D" uid="uid://d1rfn3ugsbhyr" path="res://sprites/Enemies/Enemy1.png" id="2_krts5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otfvv"]
+size = Vector2(35, 40)
+
+[node name="Enemy" type="PathFollow2D"]
+editor_description = "Basic type of enemy. Can be used as template for advanced anemies.
+Speed should be in range <0.02, 0.05>."
+rotates = false
+script = ExtResource("1_yavla")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_krts5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_otfvv")
