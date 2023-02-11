@@ -68,6 +68,7 @@ texture_region_size = Vector2i(32, 32)
 1:4/0 = 0
 1:4/0/terrain_set = 0
 1:4/0/terrain = 0
+1:4/0/custom_data_0 = true
 
 [sub_resource type="TileSet" id="TileSet_l7dpw"]
 tile_size = Vector2i(32, 32)
@@ -76,6 +77,8 @@ terrain_set_0/terrain_0/name = "Grass"
 terrain_set_0/terrain_0/color = Color(0.133333, 0.615686, 0, 1)
 terrain_set_0/terrain_1/name = "Path"
 terrain_set_0/terrain_1/color = Color(0.627451, 0.368627, 0.160784, 1)
+custom_data_layer_0/name = "Place"
+custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_6oibo")
 
 [sub_resource type="Curve2D" id="Curve2D_vnr5t"]
