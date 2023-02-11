@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6hovb2gxuuop"]
+[gd_scene load_steps=6 format=3 uid="uid://b6hovb2gxuuop"]
 
 [ext_resource type="Texture2D" uid="uid://5o53mkhdhlk7" path="res://sprites/RPG Nature Tileset.png" id="1_f5ilk"]
+[ext_resource type="PackedScene" uid="uid://cutw0cw1ciph8" path="res://src/Enemies/Enemy.tscn" id="2_4lx1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oibo"]
 texture = ExtResource("1_f5ilk")
@@ -100,3 +101,9 @@ zoom = Vector2(2, 2)
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_vnr5t")
+
+[node name="Enemy" parent="Path2D" instance=ExtResource("2_4lx1n")]
+editor_description = "Basic type of enemy. Can be used as template for advanced anemies.
+Speed should be in range <20.0, 50.0>."
+position = Vector2(-32, 320)
+speed = 20.0
